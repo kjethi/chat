@@ -1,0 +1,55 @@
+<html><head>
+<title class="js_main_title">
+	Chat  Online
+</title>
+<link href="/css/style.css" rel="stylesheet" />
+<link href="/css/reset.css" rel="stylesheet" />
+<!--     FONT AWESOME  CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+<!--     CUSTOM STYLE CSS -->
+<!--     <link href="http://172.16.120.68/trial/node Demo/chat/assets/css/style.css" rel="stylesheet" /> -->
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/index.js"></script>
+
+<div class="wrapper">
+<div class="container">
+        <div class="left">
+            <div class="top">
+                Name : <span class="js_display_username"><%= userDetail.firstName %> (<a href="http://localhost:2828/logout">Logout</a>) </span>
+            </div>
+            <ul class="people" id="userList">
+            </ul>
+        </div>
+        <div class="right" >
+            <div class="top"><span>To: <span class="name"></span></span></div>
+            <div class="js_chat_box">
+            
+            </div>
+            <div class="write">
+                  <label for="file-input">
+			        <span class="write-link attach"></span>
+			    </label>
+<img class="image" src=""/>
+    <input class="js_send_msg_image" id="file-input" type="file" style="display:none"/>
+                <input type="text" class="js_send_msg_text" />
+                <a href="javascript:;" class="write-link smiley"></a>
+                <a href="javascript:;" class="write-link send js_send_msg_btn"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+    var __USERNAME__= '<%= userDetail.firstName+ " " +userDetail.lastName %>';
+    var __USERID__= '<%= userDetail._id %>';
+    </script>
+    
+</div>
+</body>
+</html>
+

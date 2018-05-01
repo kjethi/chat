@@ -43,7 +43,7 @@ io.on('connection', function(socket){
 	console.log('start connection')
 	  
 	  require('./socket')(io,socket)
-	  
+	  //krunal-developer
 	  
 	});	
 
